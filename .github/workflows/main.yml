@@ -44,7 +44,7 @@ jobs:
      steps:
      - uses: actions/checkout@v2
      - name: Kubernetes set context
-       uses: Azure/aks-set-context@v1.1
+       uses: Azure/K8s-set-context@v1.1
        with:
         method: kubeconfig
         kubeconfig: ${{ secrets.K8S_CONFIG }}
