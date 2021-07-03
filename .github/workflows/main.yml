@@ -39,5 +39,17 @@ jobs:
             cadu1982/rotten-potatoes:latest
             cadu1982/rotten-potatoes:${{ github.run_number }}
             
+  CD:
+     runs-on: ubuntu-latest
+     steps:
+     - uses: actions/checkout@v2
+     - name: DigitalOcean Kubernetes
+       uses: matootie/dokube@v1.3.4
+       with:
+        method: kubeconfig
+        kubeconfig: ${{ secrets.K8S_CONFIG }}
+        
+  
+            
           
 
