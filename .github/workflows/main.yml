@@ -37,7 +37,7 @@ jobs:
           push: true
           tags: |
             cadu1982/rotten-potatoes:latest
-            cadu1982/rotten-potatoes:${{ github_run_number }}
+            cadu1982/rotten-potatoes:${{ github.run_number }}
             
           
 
