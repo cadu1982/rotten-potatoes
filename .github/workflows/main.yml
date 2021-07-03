@@ -43,8 +43,8 @@ jobs:
      runs-on: ubuntu-latest
      steps:
      - uses: actions/checkout@v2
-     - name: DigitalOcean Kubernetes
-       uses: matootie/dokube@v1.3.4
+     - name: Azure Kubernetes set context
+       uses: Azure/aks-set-context@v1.1
        with:
         method: kubeconfig
         kubeconfig: ${{ secrets.K8S_CONFIG }}
